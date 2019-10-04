@@ -2,9 +2,11 @@
 layout    : post
 category  : freetalk
 title     : 初めまして...(Take 2)
-tags      : []
+tags      : [freetalk]
 date      : 2019-08-13 10:15:00
 published : true
+# excerpt   : こんにちは！ブログを始めました！
+lang      : ja_JP
 ---
 
 皆さん、こんにちは！Pinです！
