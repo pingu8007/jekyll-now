@@ -5,6 +5,7 @@ title     : template
 tags      : [template]
 date      : 2000-01-01 00:00:00
 published : false
+sitemap   : false
 ---
 
 ## Linking
@@ -25,4 +26,12 @@ description : # A short description of the page's content
 image     : # URL to an image associated with the post, page, or document (e.g., /assets/page-pic.jpg)
 author    : # Page-, post-, or document-specific author information (see Advanced usage)
 lang      : # Page-, post-, or document-specific language information
+```
+
+## About Sitemap
+
+Add following property to override global Sitemap setting
+
+```yaml
+sitemap: false # This will disable sitemap generation for this page or post
 ```

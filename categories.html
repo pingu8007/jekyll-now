@@ -3,13 +3,17 @@ layout: page
 title: Categories
 header: Posts By Category
 group: navigation
+sitemap: false
 ---
 
-<div class="">
-	{% for category in site.categories %} 
-		<h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
-		<ul>
-			{% assign pages_list = category[1] %}
-		</ul>
+{% for category in site.categories %}
+<div class="posts">
+	<h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
+	{% assign pages_list = category[1] %}
+	{% for post in pages_list %}
+	<article class="post">
+		<p>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+	</article>
 	{% endfor %}
 </div>
+{% endfor %}

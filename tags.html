@@ -3,13 +3,17 @@ layout: page
 title: Tags
 header: Posts By Tag
 group: navigation
+sitemap: false
 ---
 
-<div class="">
-	{% for tag in site.tags %} 
-		<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-		<ul>
-			{% assign pages_list = tag[1] %}
-		</ul>
+{% for tag in site.tags %}
+<div class="posts">
+	<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+	{% assign pages_list = tag[1] %}
+	{% for post in pages_list %}
+	<article class="post">
+		<p>{{ post.date | date: "%Y-%m-%d" }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+	</article>
 	{% endfor %}
 </div>
+{% endfor %}
