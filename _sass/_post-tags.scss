@@ -1,0 +1,63 @@
+
+//
+// POST TAGS
+//
+
+// modified from https://codepen.io/wbeeftink/pen/dIaDH
+
+.tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.tags li {
+  float: left; 
+}
+
+.tag {
+  background: $lightGray;
+  border-radius: 3px 0 0 3px;
+  color: $mediumGray;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.tag::before {
+  background: $white;
+  border-radius: 10px;
+  box-shadow: inset 0 1px $lightShadow;
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 8px;
+}
+
+.tag::after {
+  background: $white;
+  border-bottom: 11px solid transparent;
+  border-left: 10px solid $lightGray;
+  border-top: 11px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: $red;
+  color: $white;
+}
+
+.tag:hover::after {
+   border-left-color: $red;
+}

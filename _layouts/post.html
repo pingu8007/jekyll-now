@@ -13,5 +13,12 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
+  {% assign sorted_tag = page.tags | sort %}
+  <ul class="tags">
+    {% for tag in sorted_tag %}
+    <li><a href="{{ site.baseurl }}/tags/#{{ tag }}-ref" class="tag">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+
   {% include disqus.html %}
 </article>
