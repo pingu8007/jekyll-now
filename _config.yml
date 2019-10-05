@@ -16,6 +16,7 @@ avatar: https://gravatar.com/avatar/a24c01394983fa6274e24238a67d0177?size=640
 #
 
 timezone: Asia/Taipei
+excerpt_separator: <!--more-->
 
 # Defaults
 defaults:
