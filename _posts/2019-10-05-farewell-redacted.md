@@ -6,6 +6,8 @@ tags      : [freetalk, ingress]
 date      : 2019-10-05 11:05 +8
 published : true
 # excerpt   : こんにちは！ブログを始めました！
+image     : /assets/2019/IMG_20191003_184153.jpg
+has_thumb : true
 lang      : ja_JP
 ---
 
@@ -19,4 +21,4 @@ lang      : ja_JP
 
 初めてのカード作り、たくさんの準備が必要です。カードの材料を調べたり、印刷の知識を勉強したり、いろいろなちゃんとできました。それで...
 
-![出来ました！](/assets/2019/IMG_20191003_184153.jpg)
+![Biocard成果](/assets/2019/IMG_20191003_184153.jpg "出来ました！")
