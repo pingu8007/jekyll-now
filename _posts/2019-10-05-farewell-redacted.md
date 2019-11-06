@@ -5,7 +5,6 @@ title     : 名刺(仮)を作りました
 tags      : [freetalk, ingress]
 date      : 2019-10-05 11:05 +8
 published : true
-# excerpt   : こんにちは！ブログを始めました！
 image     : /assets/2019/IMG_20191003_184153.jpg
 has_thumb : true
 lang      : ja_JP
