@@ -9,7 +9,7 @@ name: PinGuの独り言
 description: 人生は...
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://gravatar.com/avatar/a24c01394983fa6274e24238a67d0177?size=640
+avatar: https://gravatar.com/avatar/a24c01394983fa6274e24238a67d0177?size=120
 
 #
 # Flags below are optional
@@ -25,13 +25,14 @@ defaults:
     values:
       image     : /images/avatar.png
       has_thumb : false
-      lang      : zh_Hant_TW
+      lang      : ja_JP # Used in SEO
 
 # SEO configuration
 author: PinGu
 twitter:
   username: pinguotaku
   card: summary
+lang: ja-JP # Used in <html lang="{{ site.lang }}">
 
 # Includes an icon in the footer for each username you enter
 footer-links:

@@ -9,7 +9,7 @@ layout: default
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       {% if post.has_thumb %}
-      <div class="thumbnail"><img src="{{ site.baseurl }}{{ post.image }}"></div>
+      <div class="thumbnail"><img src="{{ site.baseurl }}{{ post.image }}" alt="thumbnail"></div>
       {% endif %}
       <div class="entry">
         {{ post.excerpt }}

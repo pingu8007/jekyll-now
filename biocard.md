@@ -19,6 +19,6 @@ The draft of front side didn't spend me too long. Although there are newer desig
 
 The back side, however, spent me several days to write something in NIA style. It should be descriptive, should just fit into the layout, should not too serious. I have to say, I hate writing.
 
-![First version biocard](/assets/biocard/pingu_1_layout2016.jpg "Isn't she cute?")
+![First version biocard](/assets/biocard/pingu_1_layout2016.webp "Isn't she cute?")
 
 By the way, this page was created after I had everything printed. I almost forgot there is a QR code pointing to here, ha ha.

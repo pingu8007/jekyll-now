@@ -5,7 +5,7 @@ title     : 名刺(仮)を作りました
 tags      : [freetalk, ingress]
 date      : 2019-10-05 11:05 +8
 published : true
-image     : /assets/2019/IMG_20191003_184153.jpg
+image     : /assets/2019/IMG_20191003_184153.webp
 has_thumb : true
 lang      : ja_JP
 ---
@@ -20,4 +20,4 @@ lang      : ja_JP
 
 初めてのカード作り、たくさんの準備が必要です。カードの材料を調べたり、印刷の知識を勉強したり、いろいろなちゃんとできました。それで...
 
-![Biocard成果](/assets/2019/IMG_20191003_184153.jpg "出来ました！")
+![Biocard成果](/assets/2019/IMG_20191003_184153.webp "出来ました！")
