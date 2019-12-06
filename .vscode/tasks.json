@@ -12,6 +12,13 @@
                 "isDefault": true
             },
             "problemMatcher": []
+        },
+        {
+            "label": "build-preview",
+            "type": "shell",
+            "command": "docker-compose -f docker-compose-preview.yml up",
+            "group": "build",
+            "problemMatcher": []
         }
     ]
 }

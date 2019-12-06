@@ -1,0 +1,11 @@
+version: '3'
+services:
+  blog:
+    image: tianon/github-pages
+    command: ["jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
+    ports:
+    - "4000:4000"
+    volumes:
+    - .:/blog
+    environment: 
+    - JEKYLL_ENV=preview
