@@ -3,7 +3,7 @@ layout    : post
 category  : ingress
 title     : 名刺(仮)を作りました
 tags      : [freetalk, ingress]
-date      : 2019-10-05 11:05 +8
+date      : 2019-10-05 11:05 +08
 published : true
 image     : /assets/2019/IMG_20191003_184153.webp
 has_thumb : true

@@ -17,6 +17,9 @@ avatar: https://gravatar.com/avatar/a24c01394983fa6274e24238a67d0177?size=120
 
 timezone: Asia/Taipei
 excerpt_separator: <!--more-->
+future: false
+unpublished: false
+livereload: false
 
 # Defaults
 defaults:

@@ -3,7 +3,7 @@ layout    : post
 category  : freetalk
 title     : 仕事のつぶやき
 tags      : [freetalk]
-date      : 2019-11-06 11:05 +8
+date      : 2019-11-06 11:05 +08
 published : true
 lang      : ja_JP
 ---
