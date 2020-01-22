@@ -54,6 +54,8 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: +PinguOtaku # anything in your profile username that comes after plus.google.com/
 
+# Enter your Liker ID to enable LikeButton
+liker_id: pingu8007
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
