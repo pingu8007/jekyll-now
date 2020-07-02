@@ -1,6 +1,6 @@
 ---
 layout    : post
-category  : ingress
+category  : イングレス
 title     : 名刺(仮)を作りました
 tags      : [freetalk, ingress]
 date      : 2019-10-05 11:05 +08

@@ -1,6 +1,6 @@
 ---
 layout    : post
-category  : freetalk
+category  : フリートーク
 title     : LikeButton上線兩週後
 tags      : [likecoin]
 date      : 2020-02-15 15:35:00 +8

@@ -1,6 +1,6 @@
 ---
 layout    : post
-category  : techshare
+category  : テク
 title     : 給Jekyll加上LikeButton賺錢錢
 tags      : [likecoin, jekyll]
 date      : 2020-01-22 11:40 +08

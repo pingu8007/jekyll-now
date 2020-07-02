@@ -1,6 +1,6 @@
 ---
 layout    : post
-category  : freetalk
+category  : フリートーク
 title     : 仕事のつぶやき
 tags      : [freetalk]
 date      : 2019-11-06 11:05 +08

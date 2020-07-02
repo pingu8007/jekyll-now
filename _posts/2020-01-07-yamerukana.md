@@ -1,6 +1,6 @@
 ---
 layout    : post
-category  : freetalk
+category  : フリートーク
 title     : 辞めるかな…
 tags      : [freetalk]
 date      : 2020-01-07 14:35 +08
