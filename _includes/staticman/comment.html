@@ -1,0 +1,28 @@
+{% if site.staticman.enabled %}
+<section class="comments">
+  <hr>
+  <div>
+    <h2>Comments</h2>
+    {% if site.data.comments[page.slug] %}
+    <!-- Existing comments if any -->
+    {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to == ''" %}
+    {% assign comments_by_date = comments | sort: 'date' | reverse %}
+    {% for comment in comments_by_date %}
+      {% include staticman/comment-entry.html comment=comment %}
+    {% endfor %}
+    {% else %}
+    <div>No comments yet :D</div>
+    {% endif %}
+  </div>
+  <hr>
+  <div>
+    <h2>Post comment</h2>
+    {% unless site.staticman.readonly %}
+    <!-- Leave yours -->
+    {% include staticman/form.html %}
+    {% else %}
+    <div>Commenting is disabled</div>
+    {% endunless %}
+  </div>
+</section>
+{% endif %}

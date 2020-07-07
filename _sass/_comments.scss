@@ -1,0 +1,70 @@
+
+.button {
+  background: rgba(158,158,158,0.2);
+  box-shadow: 0 2px 2px 2px rgba(0,0,0,0.14);
+  border: none;
+  border-radius: 2px;
+  padding: 4px 8px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  margin: 4px 0px 0px 0px
+}
+
+button:hover {
+  background-color: #757575;
+  color: white
+}
+
+.comment__new {
+  padding: 0px 0px 14px 0px
+}
+
+.comment__author {
+  color: #757575
+}
+
+.comment__date {
+  font-size: 15.75px;
+  font-weight: normal;
+  float: right;
+}
+
+.comment__body {
+  font-size: 17px;
+  border-top: 1px solid #EEEEEE;
+  padding: 4px 0px 4px 0px;
+}
+
+.comment__meta {
+  text-align: left;
+  color: #757575;
+  font-size: 15.75px
+}
+
+.comment__avatar {
+  float: left;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+.comments__existing {
+  padding: 8px 0px 0px 0px
+}
+
+.comment {
+  border-top: 0px solid #dbdbdb;
+  padding: 0px 0px 0px 0px;
+  margin-bottom: 1em
+}
+
+.comment.child {
+  margin-left: 3em
+}
+
+.comment__reply-link {
+  color: #757575;
+  font-size: 15.75px
+}

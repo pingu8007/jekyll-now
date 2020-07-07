@@ -1,77 +1,40 @@
-# Name of the property. You can have multiple properties with completely
-# different config blocks for different sections of your site.
-# For example, you can have one property to handle comment submission and
-# another one to handle posts.
 comments:
-  # (*) REQUIRED
-  #
-  # Names of the fields the form is allowed to submit. If a field that is
-  # not here is part of the request, an error will be thrown.
+  moderation: true
   allowedFields: ["name", "email", "url", "message"]
+  requiredFields: ["name", "email", "message"]
 
-  # (*) REQUIRED
-  #
-  # Name of the branch being used. Must match the one sent in the URL of the
-  # request.
-  branch: "master"
-
-  # Text to use as the commit message or pull request title. Accepts placeholders.
-  commitMessage: "Add Staticman data"
-
-  # (*) REQUIRED
-  #
-  # Destination path (filename) for the data files. Accepts placeholders.
+  path: "_data/comments/{options.slug}"
   filename: "entry{@timestamp}"
-
-  # The format of the generated data files. Accepted values are "json", "yaml"
-  # or "frontmatter"
   format: "yaml"
 
-  # List of fields to be populated automatically by Staticman and included in
-  # the data file. Keys are the name of the field. The value can be an object
-  # with a `type` property, which configures the generated field, or any value
-  # to be used directly (e.g. a string, number or array)
+  branch: "master"
+  commitMessage: "Add Staticman data"
+
   generatedFields:
+    replying_to: "" # replying_to not implemented yet
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: "iso8601"
 
-  # Whether entries need to be appproved before they are published to the main
-  # branch. If set to `true`, a pull request will be created for your approval.
-  # Otherwise, entries will be published to the main branch automatically.
-  moderation: true
-
-  # Name of the site. Used in notification emails.
-  name: "pingu.moe"
-
-  # Notification settings. When enabled, users can choose to receive notifications
-  # via email when someone adds a reply or a new comment. This requires an account
-  # with Mailgun, which you can get for free at http://mailgun.com.
-  #notifications:
-    # Enable notifications
-    #enabled: true
-
-    # (!) ENCRYPTED
-    #
-    # Mailgun API key
-    #apiKey: "1q2w3e4r"
-
-    # (!) ENCRYPTED
-    #
-    # Mailgun domain (encrypted)
-    #domain: "4r3e2w1q"
-
-  # (*) REQUIRED
-  #
-  # Destination path (directory) for the data files. Accepts placeholders.
-  path: "_data/comments/{options.slug}"
-
-  # Names of required fields. If any of these isn't in the request or is empty,
-  # an error will be thrown.
-  requiredFields: ["name", "email", "message"]
-
-  # List of transformations to apply to any of the fields supplied. Keys are
-  # the name of the field and values are possible transformation types.
   transforms:
     email: md5
+
+  name: "PinGuの独り言"
+  notifications:
+    enabled: false
+    apiKey: "rhsnjZHmeWFYlIULeo94Kxh5vHBOXJHBcNjC9XrcYoUarfl86mWif86iiGqDksQ+hl95Y9wkRmtdzD3PpKun1DuBnI+b5kqiSUXCfrOXd92rhanYTBIvBlnecDyRFvGYOHFvJ9jJlhq+ZwLSlJlLZB1TncYnG2Not0DTEapj6ua+6qqTIDCz6SCSVE0znesLCpB3YRNGkw36ATwcx9OrzRk1QkG94SrBHpO8fKo3KCdImSbFY8ic7U93Avmwxk8fG8Kk6qkObq/evIVJhbuRRSuN7TAdsDwdby8XwR1CWDc/wIlJZWidnw6DhTy8gqvKINwvhcpypkynaxNiCNeJaQ=="
+    domain: "f8eZdFdTLdfnZzWzAfOWpbHmzabAEOfZTxiFCRfQbT0LOSiLs/a/kiVvK9zOsLu0tOImVaQEmIzB5huCEarKJKOY88UjT9OR2Zf6zgOTvdz7M/VMo4nJ2OMO7Fp8gfMqWHd5fckos0aNlcrEyQd9jgmzN5EZr7tBqRCp30rIF5/zfpvUBUKj2BsOZVw27LmxeXMX7SZGcwpvCslfqwzzaacfOSDEjpfvgwqvLh8h5A4NqlFLhQDkaW94mjFRpIVPBZTP3YjX0hzTnzdjVuuMcPq0+cBTlSH/uzngi7vTVYR51fxMLmZ+x39eG9/t69ycnlr/O/IVqoGL7kqaqh+X3Q=="
+
+  reCaptcha:
+    enabled: true
+    siteKey: "6Legeq4ZAAAAAEBvgzEXSZF1wCOavM1MSTJmbnUj"
+    secret: "XPRtf/QQvo2dEQEIK0ppSeAon4wBBUT+NTCJQYm15AtKPKXIWJP2d7crL8vvtWHGSJr/LNaqpf6ZuD/nCPou/lKiTLJaKYkOXtsIsWCeBWiPRyK5ULs4mMcG0L/GRc7B+O489N+51p1K2j7RSQu+ATAG5opkXutdx/DWcq0rup30rIxvY8seFcme2mQdBkeEE8ibHDyZPjLgiLzGAPARo94NMMtYOe/rr2tj9XyfHddAT6VHDSAPHkkN5gGlARh5WMnpLbcXLt6sRMZ91gnNcG79SHfJcdSQmTKIs4rBn34MVsCShx3v7J0gSokoBHjEzyu4IbryA+dHMoQhvlgm/g=="
+
+  akismet:
+    enabled: true
+    author: "name"
+    authorEmail: "email"
+    authorUrl: "url"
+    content: "message"
+    type: "comment"

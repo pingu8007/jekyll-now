@@ -1,0 +1,12 @@
+<article>
+  <img class="comment__avatar" src="https://www.gravatar.com/avatar/{{ comment.email }}?s=48" alt="{{ comment.name }}'s gravatar">
+  <div class="comment__author">
+    {{ comment.name }}
+    <span class="comment__date">
+      <a href="#">{{ comment.date | date: "%Y-%m-%d %H:%M:%S" }}</a>
+    </span>
+  </div>
+  <div class="comment__body">
+    <p>{{ comment.message | strip_html | markdownify }}</p>
+  </div>
+</article>

@@ -61,6 +61,11 @@ liker_id: pingu8007
 # You can find your shortname on the Settings page of your Disqus account
 disqus:
 
+staticman:
+  enabled: true
+  readonly: true
+  instance: "https://pingumoe-comment-system.herokuapp.com/v2/entry/pingu8007/pingu8007.github.io/master/comments"
+
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
 

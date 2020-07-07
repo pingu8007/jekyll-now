@@ -1,0 +1,9 @@
+<form method="POST" action="{{ site.staticman.instance }}">
+  <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+  <input name="options[replying_to]" type="hidden" value="">
+  <label><input name="fields[name]" type="text">Name</label>
+  <label><input name="fields[email]" type="email">E-mail</label>
+  <label><input name="fields[url]" type="url">Url</label>
+  <label><textarea name="fields[message]"></textarea>Message</label>
+  <button type="submit">Send</button>
+</form>
