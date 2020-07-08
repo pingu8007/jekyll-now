@@ -1,5 +1,5 @@
 
-.button {
+.comments button {
   background: rgba(158,158,158,0.2);
   box-shadow: 0 2px 2px 2px rgba(0,0,0,0.14);
   border: none;
@@ -12,13 +12,24 @@
   margin: 4px 0px 0px 0px
 }
 
-button:hover {
+.comments button:hover {
   background-color: #757575;
   color: white
 }
 
 .comment__new {
   padding: 0px 0px 14px 0px
+}
+
+.comments input, .comments textarea {
+  border: 1px solid rgba(0,0,0,0.12);
+  padding: 4px 5px;
+  width: 100%;
+  font: 400 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.comments textarea {
+  height: 8em;
 }
 
 .comment__author {

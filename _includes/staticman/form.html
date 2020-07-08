@@ -1,9 +1,16 @@
-<form method="POST" action="{{ site.staticman.instance }}">
+<form id="make_comment" method="POST" action="{{ site.staticman.instance }}">
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <input name="options[replying_to]" type="hidden" value="">
-  <label><input name="fields[name]" type="text">Name</label>
-  <label><input name="fields[email]" type="email">E-mail</label>
-  <label><input name="fields[url]" type="url">Url</label>
-  <label><textarea name="fields[message]"></textarea>Message</label>
+  <input name="options[reCaptcha][siteKey]" type="hidden" value="6Legeq4ZAAAAAEBvgzEXSZF1wCOavM1MSTJmbnUj">
+  <input name="options[reCaptcha][secret]" type="hidden"
+    value="XPRtf/QQvo2dEQEIK0ppSeAon4wBBUT+NTCJQYm15AtKPKXIWJP2d7crL8vvtWHGSJr/LNaqpf6ZuD/nCPou/lKiTLJaKYkOXtsIsWCeBWiPRyK5ULs4mMcG0L/GRc7B+O489N+51p1K2j7RSQu+ATAG5opkXutdx/DWcq0rup30rIxvY8seFcme2mQdBkeEE8ibHDyZPjLgiLzGAPARo94NMMtYOe/rr2tj9XyfHddAT6VHDSAPHkkN5gGlARh5WMnpLbcXLt6sRMZ91gnNcG79SHfJcdSQmTKIs4rBn34MVsCShx3v7J0gSokoBHjEzyu4IbryA+dHMoQhvlgm/g==">
+  <label>Name<input name="fields[name]" type="text"></label>
+  <label>E-mail<input name="fields[email]" type="email"></label>
+  <label>Url<input name="fields[url]" type="url"></label>
+  <label>Message<textarea name="fields[message]"></textarea></label>
+  <div class="g-recaptcha" data-sitekey="6Legeq4ZAAAAAEBvgzEXSZF1wCOavM1MSTJmbnUj"></div>
+  <br />
   <button type="submit">Send</button>
 </form>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="/assets/js/comments.js"></script>
