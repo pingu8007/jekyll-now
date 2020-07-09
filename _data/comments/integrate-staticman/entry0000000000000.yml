@@ -1,0 +1,17 @@
+_id: 09c461e0-c016-11ea-b641-0bfe565d77c3
+name: PinGu
+email: a24c01394983fa6274e24238a67d0177
+url: 'https://pingu.moe'
+replying_to: ''
+message: |-
+  ### Hello, World
+
+  * List item a
+  * List item b
+
+  HTML is not ~~allowed~~, but you can use ```Markdown```
+
+  **新段落**  
+  行2  
+  行3[連結](https://example.org)
+date: '2020-07-09T06:00:00Z'
