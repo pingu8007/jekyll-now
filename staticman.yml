@@ -27,9 +27,10 @@ comments:
     domain: "f8eZdFdTLdfnZzWzAfOWpbHmzabAEOfZTxiFCRfQbT0LOSiLs/a/kiVvK9zOsLu0tOImVaQEmIzB5huCEarKJKOY88UjT9OR2Zf6zgOTvdz7M/VMo4nJ2OMO7Fp8gfMqWHd5fckos0aNlcrEyQd9jgmzN5EZr7tBqRCp30rIF5/zfpvUBUKj2BsOZVw27LmxeXMX7SZGcwpvCslfqwzzaacfOSDEjpfvgwqvLh8h5A4NqlFLhQDkaW94mjFRpIVPBZTP3YjX0hzTnzdjVuuMcPq0+cBTlSH/uzngi7vTVYR51fxMLmZ+x39eG9/t69ycnlr/O/IVqoGL7kqaqh+X3Q=="
 
   reCaptcha:
+    # Don't forget _includes/staticman/form.html
     enabled: true
-    siteKey: "6Legeq4ZAAAAAEBvgzEXSZF1wCOavM1MSTJmbnUj"
-    secret: "XPRtf/QQvo2dEQEIK0ppSeAon4wBBUT+NTCJQYm15AtKPKXIWJP2d7crL8vvtWHGSJr/LNaqpf6ZuD/nCPou/lKiTLJaKYkOXtsIsWCeBWiPRyK5ULs4mMcG0L/GRc7B+O489N+51p1K2j7RSQu+ATAG5opkXutdx/DWcq0rup30rIxvY8seFcme2mQdBkeEE8ibHDyZPjLgiLzGAPARo94NMMtYOe/rr2tj9XyfHddAT6VHDSAPHkkN5gGlARh5WMnpLbcXLt6sRMZ91gnNcG79SHfJcdSQmTKIs4rBn34MVsCShx3v7J0gSokoBHjEzyu4IbryA+dHMoQhvlgm/g=="
+    siteKey: "6LdWTq8ZAAAAAPdXDgo35S8vVJkMlLBShO_DkuFY"
+    secret: "CSMg4rs2giuE/LqiYTyzeXW1Wu1tN+iXivWj/nfHq0YZzUVqJL3HCpJVVD624qNUukvbOgd/dUUxfN0icR64LbvPtukzAb3gOl7YEAncITW7ziYTAiMe56veF82SgctPEKh95HsgNap7cQtZpMtS0UmRZVMMsYy6jINiHlO71ifM5AwVVJlNH6hMSQFSz+A6sgDH2OJJwuD0D6k0vQu3C+3Uk+2gkGKAIDOKCnu4ST6Ofzl0Av2zsszf5PaKIsKE8flLqSJc4XX0o1GGrTj+29truZqdYtWtzhKpLEJofa0K6um5HNR6lxAKp1+c7Mkc46B0o5jk6vKGODplI45MqA=="
 
   akismet:
     enabled: true
