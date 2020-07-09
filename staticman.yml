@@ -1,5 +1,5 @@
 comments:
-  moderation: true
+  moderation: false
   allowedFields: ["name", "email", "url", "message"]
   requiredFields: ["name", "email", "message"]
 
@@ -8,7 +8,7 @@ comments:
   format: "yaml"
 
   branch: "master"
-  commitMessage: "Add Staticman data"
+  commitMessage: "New comment from {fields.name}"
 
   generatedFields:
     replying_to: "" # replying_to not implemented yet

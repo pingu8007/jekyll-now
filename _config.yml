@@ -63,7 +63,7 @@ disqus:
 
 staticman:
   enabled: true
-  readonly: true
+  readonly: false
   instance: "https://pingumoe-comment-system.herokuapp.com/v2/entry/pingu8007/pingu8007.github.io/master/comments"
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking

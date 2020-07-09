@@ -3,9 +3,9 @@
     src="https://www.gravatar.com/avatar/{{ comment.email }}?s=48">
   <div class="comment__author">
     {{ comment.name }}
-    <span class="comment__date">
-      <a href="#">{{ comment.date | date: "%Y-%m-%d %H:%M:%S" }}</a>
-    </span>
+    <time class="comment__date" datetime="{{ comment.date | date: '%FT%TZ' }}">
+      <a href="#">{{ comment.date | date: "%m-%d %R %Z" }}</a>
+    </time>
   </div>
   <div class="comment__body">
     <p>{{ comment.message | strip_html | markdownify }}</p>
