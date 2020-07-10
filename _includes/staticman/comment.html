@@ -1,4 +1,4 @@
-{% if site.staticman.enabled %}
+{% if site.comment.enabled %}
 <section id="comments" class="comments">
   <hr>
   <div class="comments__existing">
@@ -15,7 +15,7 @@
   </div>
   <div class="comments__new">
     <h2>Post comment</h2>
-    {% unless site.staticman.readonly %}
+    {% unless site.comment.locked or page.locked %}
     {% include staticman/form.html %}
     {% else %}
     <div>Commenting is disabled</div>

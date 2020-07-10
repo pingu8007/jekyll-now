@@ -29,6 +29,7 @@ defaults:
       image     : /images/avatar.png
       has_thumb : false
       lang      : ja_JP # Used in SEO
+      locked    : false
 
 # SEO configuration
 author: PinGu
@@ -57,13 +58,15 @@ footer-links:
 # Enter your Liker ID to enable LikeButton
 liker_id: pingu8007
 
+comment:
+  enabled: true
+  locked: false
+
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
 disqus:
 
 staticman:
-  enabled: true
-  readonly: false
   instance: "https://pingumoe-comment-system.herokuapp.com/v2/entry/pingu8007/pingu8007.github.io/master/comments"
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
