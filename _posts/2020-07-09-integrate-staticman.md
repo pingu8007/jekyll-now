@@ -16,7 +16,7 @@ lang      : zh-TW
 
 ## 方案比較
 
-最常見的做法就是用CMS提供的評論機制，這應該是WordPress和Blogspot用戶最常見的作法。因為不能評論的CMS幾乎不存在，又CMS本身就有基本主機開銷，開啟評論功能的成本極低。而且主站和評論存在於同一套系統內，要備份還原要搬家遷移都方便。  
+最常見的做法就是用CMS提供的評論機制，這應該是WordPress和Blogspot用戶最常見的作法。因為不能評論的CMS幾乎不存在，又CMS本身就有基本主機開銷，開啟評論功能的額外成本極低。而且主站和評論存在於同一套系統內，要備份還原要搬家遷移都方便。  
 不過本站是採用Jekyll建立的靜態網站，所以CMS這種東西很遺憾是不存在的。
 
 * Disqus
@@ -27,13 +27,13 @@ lang      : zh-TW
 
   Facebook的追蹤器是有名的多，加上為了套取用戶個資各種不擇手段，連強逼用戶~~賣朋友~~找好友驗身這種事都做得出來，早早就上了我的黑名單。一個連帳號都砍光的東西，回鍋這種事打死都不會考慮。
 
-* Commento.io
+* [Commento.io](https://commento.io/)
 
   Commento.io在首頁反覆強調他的隱私性，實際的使用體驗也十分良好，就是要架主機過於麻煩。
 
-* Comments.app
+* [DiscussBot](https://comments.app/)
 
-  Comments.app是Telegram提供的評論系統。介面簡潔功能OK，但仰賴Telegram帳號讓我有疑慮，畢竟現在換手機號的成本早就和以前不可同日而語。
+  DiscussBot是Telegram提供的評論系統。介面簡潔功能OK，但仰賴Telegram帳號讓我有疑慮，畢竟現在換手機號的成本早就和以前不可同日而語。
 
 * 跳轉到SNS
 
@@ -43,7 +43,7 @@ lang      : zh-TW
 
   因為Github Pages/Gitlab Pages自帶支援Jekyll的關係，很多網站都直接搭在上面，發想拿issue系統來發評論也就不奇怪了。不過這涉及到API呼叫和OAuth，而且訪客必須要有帳號才能評論，日後也不好搬家，所以只能算免費方案的次選吧。
 
-* Staticman
+* [Staticman](https://staticman.net)
 
   同樣是以網站搭在Github/Gitlab之上為前提，每有新評論就建立一個data file並發commit/PR合併，讓Jekyll在建置過程把評論嵌到頁面之中。這個方式最大好處是除了commit/PR需要呼叫API以外，其他全部是標準Git流程，日後搬家或是在本地都可以完整重現，Github掛了(拜託不要)都不怕。  
   所有方案裡唯一顯示評論不用依賴外部服務的方案，這麼厲害就決定是你了
@@ -52,16 +52,16 @@ lang      : zh-TW
 
 決定採用Staticman之後就要想辦法整合進來。Staticman的官方文件建議把公開的bot添加為協作者，但是根據issue顯示這個bot因為各種問題早就停止服務了，使用者要自己開設實例才行。還好這個實例不需要太多資源，Heroku的免費方案就可以搞定。
 
-Staticman提供了部屬到Heroku的功能，本文撰寫當下因為還欠幾個PR所以使用`dev`分支。點選部署到Heroku之後輸入App名稱並選擇地區，第一步驟就完成了。把部屬完成的App路徑(`APP_URL`)記下來，後續的參數設定和表單整合都還需要它。
-![deploy_to_heroku](/assets/2020/0709-staticman/01.png)
-![app_config_01](/assets/2020/0709-staticman/02.png)
+Staticman提供了部屬到Heroku的功能，本文撰寫當下因為還欠幾個PR等待合併所以使用[`dev`分支](https://github.com/eduardoboucas/staticman/tree/dev)。點選部署到Heroku之後輸入App名稱並選擇地區，第一步驟就完成了。把部屬完成的App路徑(`APP_URL`)記下來，後續的參數設定和表單整合都還需要它。
+![deploy_to_heroku](/assets/2020/0709-staticman/01.png "找到Deploy to Heroku大力給他按下去")
+![app_config_01](/assets/2020/0709-staticman/02.png "挑一個漂亮的門牌開始部署")
 
 ## 註冊GitHub App
 
 Staticman和Github連結有幾種方式，一種是`Personal Access Token`直接存取，另一種是註冊為GitHub App取得授權。第一種方式的教學很多請自行Google，這裡只介紹第二種方式。
 
 先去到GitHub的[開發人員設定](https://github.com/settings/apps)，找到`New GitHub App`進去
-![app_config_01](/assets/2020/0709-staticman/03.png)
+![app_config_02](/assets/2020/0709-staticman/03.png "有沒有看見新增按鈕?")
 
 必須欄位如下，其他選項自行斟酌：
 
@@ -90,7 +90,7 @@ Staticman允許多人共用實例，為避免別人的密鑰暴露，各站台�
 ## 設定Staticman
 
 接下來要設定Staticman實例，讓它可以行使前面賦予給GitHub App的職權。回到Heroku打開剛剛建立的App然後找到`Setting`標籤，在下方Config Vars區段點`Reveal Config Vars`打開環境變數設定。
-![app_config_01](/assets/2020/0709-staticman/04.png)
+![app_config_03](/assets/2020/0709-staticman/04.png "人家的環境變數不叫環境變數...")
 
 變數名稱和值對應如下，注意別貼錯：
 
@@ -99,7 +99,7 @@ Staticman允許多人共用實例，為避免別人的密鑰暴露，各站台�
 * RSA_PRIVATE_KEY: 自行產生的RSA密鑰
 
 按Add會自動儲存，三個變數都填好之後打開APP_URL理應會出現歡迎訊息了
-![app_config_01](/assets/2020/0709-staticman/05.png)
+![app_config_04](/assets/2020/0709-staticman/05.png "定番的Hello World")
 
 ## 建立站台設定檔
 
