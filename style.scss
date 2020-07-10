@@ -271,6 +271,10 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
   }
+
+  .comments-counter {
+    font-size: 15px;
+  }
 }
 
 .wrapper-footer {
@@ -290,5 +294,5 @@ footer {
 @import "highlights";
 @import "svg-icons";
 @import "post-tags";
-// @import "grid-layout";
+@import "grid-layout";
 @import "comments";

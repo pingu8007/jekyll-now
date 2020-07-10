@@ -4,18 +4,6 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      {% if post.has_thumb %}
-      <div class="thumbnail"><img src="{{ site.baseurl }}{{ post.image }}" alt="thumbnail"></div>
-      {% endif %}
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+  {% include post-entry.html post=post %}
   {% endfor %}
 </div>

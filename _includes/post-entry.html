@@ -1,0 +1,21 @@
+<article class="post">
+
+  <h1>
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+  </h1>
+
+  <div class="thumbnail-wrapper">
+    {% if post.has_thumb %}
+    <div class="thumbnail"><img src="{{ site.baseurl }}{{ post.image }}" alt="thumbnail"></div>
+    {% endif %}
+    <div class="entry">{{ post.excerpt }}</div>
+  </div>
+  <div class="post-meta">
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    <span class="comments-counter">
+      {% assign comments_num = site.data.comments[post.slug] | size %}
+      <a href="{{ site.baseurl }}{{ post.url }}#comments">💬 {{comments_num}} comment</a>
+    </span>
+  </div>
+
+</article>

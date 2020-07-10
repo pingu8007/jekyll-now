@@ -1,45 +1,50 @@
-
-.post {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  @include mobile {
-    display: block;
-  }
-}
-
 .post > * {
-  grid-column: 1/-1;
   margin: 3px
 }
 
-.post .thumbnail {
-  grid-column: 1/2;
-  overflow: hidden;
-  @include mobile {
-    grid-column: 1/-1;
+.post {
+  .thumbnail-wrapper {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .comments-counter {
+    float: right;
+  }
+
+  .thumbnail {
+    width: 35%;
+    margin-right: 3px;
+    float: left;
+    overflow: hidden;
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .thumbnail + .entry {
+    width: auto;
+    @include mobile {
+      width: 100%;
+    }
   }
 }
 
-.post .thumbnail + .entry {
-  grid-column: 2/-1;
-  @include mobile {
-    grid-column: 1/-1;
+.thumbnail {
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    transition: transform .4s;
+    @include mobile {
+      max-height: 300px;
+    }
   }
-}
-
-.thumbnail img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  min-height: 200px;
-  object-fit: cover;
-  transition: transform .4s;
-  @include mobile {
-    max-height: 300px;
+  
+  img:hover {
+    transform: scale(1.3);
   }
-}
-
-.thumbnail img:hover {
-  transform: scale(1.3);
 }
