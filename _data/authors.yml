@@ -1,3 +1,5 @@
 PinGu:
+  name: PinGu # Workaround before jekyll-feed/pull/300 been merged
+  uri: "@pinguotaku" # Workaround before jekyll-feed/pull/300 been merged
   twitter: pinguotaku
   picture: /images/avatar.png
