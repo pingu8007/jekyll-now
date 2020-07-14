@@ -4,7 +4,7 @@ category  : テク
 title     : 用Staticman給網站加上評論機制
 tags      : [staticman, jekyll]
 date      : 2020-07-09 14:00:00 +8
-# published : false
+published : true
 lang      : zh-TW
 ---
 
