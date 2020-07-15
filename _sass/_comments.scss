@@ -80,14 +80,14 @@
   font-size: 15.75px
 }
 
-.hint {
-  color: $success; 
+.comments .success {
+  color: $success;
 }
 
-.hint.warning {
+.comments .warning {
   color: $warning;
 }
 
-.hint.error {
+.comments .error {
   color: $error;
 }

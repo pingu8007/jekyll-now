@@ -4,12 +4,12 @@
   <input name="options[reCaptcha][siteKey]" type="hidden" value="6LdWTq8ZAAAAAPdXDgo35S8vVJkMlLBShO_DkuFY">
   <input name="options[reCaptcha][secret]" type="hidden"
     value="CSMg4rs2giuE/LqiYTyzeXW1Wu1tN+iXivWj/nfHq0YZzUVqJL3HCpJVVD624qNUukvbOgd/dUUxfN0icR64LbvPtukzAb3gOl7YEAncITW7ziYTAiMe56veF82SgctPEKh95HsgNap7cQtZpMtS0UmRZVMMsYy6jINiHlO71ifM5AwVVJlNH6hMSQFSz+A6sgDH2OJJwuD0D6k0vQu3C+3Uk+2gkGKAIDOKCnu4ST6Ofzl0Av2zsszf5PaKIsKE8flLqSJc4XX0o1GGrTj+29truZqdYtWtzhKpLEJofa0K6um5HNR6lxAKp1+c7Mkc46B0o5jk6vKGODplI45MqA==">
-  <label>Name<input name="fields[name]" type="text"></label>
-  <label>E-mail<input name="fields[email]" type="email"></label>
+  <label>Name<span class="warning">*</span><input name="fields[name]" type="text"></label>
+  <label>E-mail<span class="warning">*</span><input name="fields[email]" type="email"></label>
   <label>Url<input name="fields[url]" type="url"></label>
-  <label>Message<textarea name="fields[message]"></textarea></label>
-  <button class="g-recaptcha" data-sitekey="6LdWTq8ZAAAAAPdXDgo35S8vVJkMlLBShO_DkuFY" data-callback="postCaptcha">Send</button>
-  <span class="hint"></span>
+  <label>Message<span class="warning">*</span><textarea name="fields[message]"></textarea></label>
+  <button class="g-recaptcha" data-sitekey="6LdWTq8ZAAAAAPdXDgo35S8vVJkMlLBShO_DkuFY">Send</button>
+  <span class="hint">Please don't duplicate submitting.</span>
 </form>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=initSubmit&render=explicit" async defer></script>
 <script src="/assets/js/comments.js"></script>

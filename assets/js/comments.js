@@ -1,18 +1,31 @@
-function postCaptcha(token) {
-  var el = document.getElementById("make_comment");
+function renderCaptcha(obs) {
+  let el = document.getElementById("make_comment");
+  let tHint = el.querySelector("span.hint");
+  if (obs) obs.unobserve(el);
+  grecaptcha.render(el.querySelector("button.g-recaptcha"), {
+    callback: token => {
+      tHint.classList.remove("success", "warning", "error");
+      tHint.textContent = "Submitting, wait a moment...";
+      let qs = new URLSearchParams();
+      new FormData(el).forEach((v, k) => qs.append(k, v));
+      fetch(el.action, { body: qs, method: "POST", }).then(res => res.json().then(body => {
+        if (!res.ok) throw new Error(body.message || body.errorCode || "Failed");
+        tHint.classList.add("success");
+        tHint.textContent = "Success. Your comment may need 1~2 minutes to be visible.";
+        el.reset();
+      })).catch(e => {
+        console.error(e);
+        tHint.classList.add("error");
+        tHint.textContent = e.message;
+      }).then(() => grecaptcha.reset());
+    }
+  });
+}
+function initSubmit() {
+  let el = document.getElementById("make_comment");
   if (el == null) return;
-  var hint = el.getElementsByClassName("hint")[0];
-  var qs = new URLSearchParams();
-  new FormData(el).forEach((v, k) => qs.append(k, v));
-  fetch(el.action, { body: qs, method: "POST", }).then(res => res.json().then(body => {
-    if (!res.ok)
-      throw new Error(body.message || body.errorCode || "Failed to create comment");
-    hint.classList.remove("error");
-    hint.textContent = "Saved";
-    el.reset();
-  })).catch(e => {
-    console.error(e);
-    hint.classList.add("error");
-    hint.textContent = e.message;
-  }).then(() => grecaptcha.reset());
+  if (window.IntersectionObserver) new IntersectionObserver(
+    (entries, obs) => entries.forEach(entry => entry.isIntersecting && renderCaptcha(obs))
+  ).observe(el);
+  else renderCaptcha();
 }
