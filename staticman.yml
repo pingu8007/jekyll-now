@@ -34,6 +34,8 @@ comments:
 
   akismet:
     enabled: true
+    apiKey: "0b81NFxwUFI5RotajIkILEaBTiOtmVHCPubqYBKbbT9vZw6gzPVSHt8NGcCvZrYDqUSH84dZJTmiUHScTvcgK5ra/smPjtpOPoGhZIqBtn35nBpR6VpKuSUb/ptKnn2bMRNRMrsFCQS6K7CMgp+M4ej3e2tMAxIm8sLmTputS6NXYXhaM85XqylgVdbaRZpnG8JUQDo7O62YAamXXDFFHHwQsknPmHPekbgVe9cWH+r+wSV07xhnxTYNTrELYwMZPy/2SmN9oBzP0zI0MWy9Mn6lh6eXryUNj0zm2VvbJRcrF1O0tCA+PrTj4lX/BSxFTgdIUDo18DD0JDOAagzW/Q=="
+    site: "w+dE7foKlxO1vHIDYDTIo/ganqfPoxDePpAUiJMf2B7W6A/elUyGqF94MtOPTS7IFJthrfkmu1qgcS5IMsCZQIm9mdisGxpSr83rVTFJggYLe61hGgOkdN85XhMJSst8bV1EVSyQVW9h72sv4MwC/nJtKsV5HZJWBTZxxBv6U0ObPQ+Vf3RXB7dA+2z1UOMJtVhJwZLwvZ292af7Kvgu9zjjNlSOX3yERCEh4I5trLNeiOGUaASD9XmHoVBCtJfyTqFRhNHKCuDCUxDZR8SgL8lGAmx/bnGjIjoeV+bZebFn8fg6sCx+f+mixmDbj169JGfzlW2WBkQBHwvmJPIomQ=="
     author: "name"
     authorEmail: "email"
     authorUrl: "url"
