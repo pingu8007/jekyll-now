@@ -7,7 +7,7 @@ comments:
   filename: "entry{@timestamp}"
   format: "yaml"
 
-  branch: "master"
+  branch: "feature-auth-test"
   commitMessage: "New comment from {fields.name}"
 
   generatedFields:
@@ -41,3 +41,16 @@ comments:
     authorUrl: "url"
     content: "message"
     type: "comment"
+
+  auth:
+    required: true
+
+  githubAuth:
+    clientId: "IXNhfVo9qlR52FLy9Sqp5c/YKgreVlPbdalzmmyKzMrP3qqeOaBzCsXGvFlWk6rWfROM3+9gkFZm01rlS8F28MuhAlHkQx+YRuWlnxAZwuRRd6epj7lRGVhI/PUhipOT1KJqoiIvISP6DHLoqF3LgFl726Z0q/sFt//ZqdA1UoGO9yNcrQKqPzYXDjRHp6Hxa7mHYdNCs+2PEzEco/WK/ETzd9rwWYKVRHFwf9WcyUFcjGGE+QnMJkM4PXgoVCWCAKzoM1f29D1VL3gDkMu2ouwEiOVBA1pu0aR9u2rruqqhWC9NmC117RlEoxKksKDiU2zE4hWTtGjd7inYGgdyxQ=="
+    clientSecret: "KEuuL7GgYjqNBcRgWO8TlwJxVFDnw0xrQAZzRWjHMVtVJ7LwuHVyMg/z2vIQsC6jSKH8WoSQi+qz83fIi2H0SRl3ZYqKH+MNt9lZIcam/pb+ADw4dJw2f2s9UXUvHmNf8ppFKWgye0cY6tz2IBaXj/Y1YxkI91CEV4TXmgT64QNmPv9xboZDQ5YriVniXaTLDxBpLNe3/UFp78BLcWnsjcsg5v+GptB+N9e+K42ojhjv35yT8V2qxRib3JttXL9F8A9ISUrYByX6LAtCQudAfFbhGKTyrwGfD27K7YlQbUfyMJbfdTRmAJ5KaVFePlQkBK4og6z4wW0c2i2SB5bUlQ=="
+    redirectUri: "http://localhost:3000/v3/auth"
+
+  gitlabAuth:
+    clientId: "wJ/Olf3T2f74FzNnW7O3qQcD+loR+FLqhuhE0I9ZK0IV5p3PuiL/2iSo/CICdB8KvDwwt4WclYsR8JxxTt1enKwcQ0RB59BePhcWJJvUW3UQplMDpszU/JTjcclev/7xHspwLtz+dWy2eBrUabcPBkIVMpkiMp1KK/Gf4vOBMR6GTwY3FwyOyiMWRXlRFGiKTXOuLNdIhdku6tDXICzmrQK9IHRwspMZ6ilxGOmmAYL4u1Uo0k5YxnNaM+pC+vfLbBUD67qHEJwqrRFM8hLB97S824UBrrrSCYaA9Eb21E726ACrACno+iSihgV/i3lekev/UUq4i8scaGf/1jzfXQ=="
+    clientSecret: "yENkzyB/wY1onj9TJU0lH/5MVoC65EUEyvROjH8c3gCp+iN5pK5/06bscQUsKRpQstIY/r0ZzfNte1W5Dpvdw/OmAa3tJtJw1DGLP6Kn/+yeOL+aSlqo/gGHyKz/mwgOrznbSZcD5f8d6YMvnvkwe0OIJpunuMcElHF4sp0O36LK+v6U9rVpRC7+zqfKHDujURFlhOWnzM6qIQmZSPpHrIP2eOQR/zReW00d3iXuotx0eLvB4QM4rhO8iA3YYmxu86x9BDVkOzZAhznrvYWqzt4F4I/GuF2kjTIfX4mTSXtrduDlNI/rH0a6yLpG5CQ9wIos2Pe8NQxpQZo4EFuvag=="
+    redirectUri: "http://localhost:3000/v3/auth"
