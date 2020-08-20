@@ -7,7 +7,7 @@ comments:
   filename: "entry{@timestamp}"
   format: "yaml"
 
-  branch: "feature-auth-test"
+  branch: "master"
   commitMessage: "New comment from {fields.name}"
 
   generatedFields:
@@ -44,6 +44,12 @@ comments:
 
   auth:
     required: true
+    responseMethod: "postMessage"
+    providers:
+      - name: "gitlab"
+        clientId: "5b8f650ed54da8001366b14987a78f0880742391db1ac2c371fd459b16303637"
+        clientSecret: "yENkzyB/wY1onj9TJU0lH/5MVoC65EUEyvROjH8c3gCp+iN5pK5/06bscQUsKRpQstIY/r0ZzfNte1W5Dpvdw/OmAa3tJtJw1DGLP6Kn/+yeOL+aSlqo/gGHyKz/mwgOrznbSZcD5f8d6YMvnvkwe0OIJpunuMcElHF4sp0O36LK+v6U9rVpRC7+zqfKHDujURFlhOWnzM6qIQmZSPpHrIP2eOQR/zReW00d3iXuotx0eLvB4QM4rhO8iA3YYmxu86x9BDVkOzZAhznrvYWqzt4F4I/GuF2kjTIfX4mTSXtrduDlNI/rH0a6yLpG5CQ9wIos2Pe8NQxpQZo4EFuvag=="
+        discovery: "https://gitlab.com/.well-known/openid-configuration"
 
   githubAuth:
     clientId: "IXNhfVo9qlR52FLy9Sqp5c/YKgreVlPbdalzmmyKzMrP3qqeOaBzCsXGvFlWk6rWfROM3+9gkFZm01rlS8F28MuhAlHkQx+YRuWlnxAZwuRRd6epj7lRGVhI/PUhipOT1KJqoiIvISP6DHLoqF3LgFl726Z0q/sFt//ZqdA1UoGO9yNcrQKqPzYXDjRHp6Hxa7mHYdNCs+2PEzEco/WK/ETzd9rwWYKVRHFwf9WcyUFcjGGE+QnMJkM4PXgoVCWCAKzoM1f29D1VL3gDkMu2ouwEiOVBA1pu0aR9u2rruqqhWC9NmC117RlEoxKksKDiU2zE4hWTtGjd7inYGgdyxQ=="

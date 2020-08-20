@@ -67,8 +67,9 @@ comment:
 disqus:
 
 staticman:
-  # instance: "https://pingumoe-comment-system.herokuapp.com/v2/entry/pingu8007/pingu8007.github.io/master/comments"
-  instance: "https://asia-northeast1-comment-on-pingu.cloudfunctions.net/comment-broker/v2/entry/pingu8007/pingu8007.github.io/master/comments"
+  # instance: "https://pingumoe-comment-system.herokuapp.com/v3/entry/github/pingu8007/pingu8007.github.io/master/comments"
+  instance: "https://asia-northeast1-comment-on-pingu.cloudfunctions.net/comment-broker/v3/entry/github/pingu8007/pingu8007.github.io/master/comments"
+  # instance: "http://localhost:3000/v3/entry/github/pingu8007/pingu8007.github.io/feature-auth-test/comments"
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:

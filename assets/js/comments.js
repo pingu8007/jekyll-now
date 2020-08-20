@@ -29,3 +29,10 @@ function initSubmit() {
   ).observe(el);
   else renderCaptcha();
 }
+window.addEventListener('message', (event) => {
+  if (typeof (event.data) == 'string' && event.data.startsWith("staticman|authdata|")) {
+    let payload = JSON.parse(event.data.substr(19))
+    document.querySelector("#make_comment input[name='options[auth-data]']").value = payload.data;
+    window.auth.close();
+  }
+});
