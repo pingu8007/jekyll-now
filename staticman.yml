@@ -43,7 +43,7 @@ comments:
     type: "comment"
 
   auth:
-    required: true
+    required: false
     responseMethod: "postMessage"
     providers:
       - name: "gitlab"
