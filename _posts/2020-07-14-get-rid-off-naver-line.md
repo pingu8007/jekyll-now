@@ -35,7 +35,6 @@ LineWorks是由Naver推出的辦公室解決方案。和只會LINE的台灣不�
 
 打開人家[首頁](http://line.worksmobile.com/)，找到右上角的`Join for FREE`。這個連結只在桌面版有，手機版看不到。
 
-
 除了綁定LINE帳號，註冊新帳號也是可以的，這邊按新帳號繼續。**如果你想按上面的按鈕，這篇文章應該不是寫給你的。**
 
 ![register_1](/assets/2020/0714-lineworks/01.png "登入or建立帳號")
