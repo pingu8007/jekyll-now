@@ -39,9 +39,9 @@ It has it's pros on some aspect, but it extensively complex our setup while we o
 
 ## Background
 
-Having a look on Spring's [defaults.xml][src-logback-default], logging pattern is provided by property *CONSOLE_LOG_PATTERN* and format of exception is controlled by *LOG_EXCEPTION_CONVERSION_WORD*, with `-%wEx` as default.
+Having a look on Spring's [defaults.xml][src-logback-default], logging pattern is provided by property *CONSOLE_LOG_PATTERN* and format of exception is controlled by *LOG_EXCEPTION_CONVERSION_WORD*, with `%wEx` as default.
 
-The `-%wEx` is bind to Spring's `ExtendedWhitespaceThrowableProxyConverter`, which has nothing but line format changed, according to [source][src-logback-wEx]. Hence we can assert it has identical *EX_DISPLAY_EVAL* syntax compare to its super: `ExtendedThrowableProxyConverter`.
+The `%wEx` is bind to Spring's `ExtendedWhitespaceThrowableProxyConverter`, which has nothing but line format changed, according to [source][src-logback-wEx]. Hence we can assert it has identical *EX_DISPLAY_EVAL* syntax compare to its super: `ExtendedThrowableProxyConverter`.
 
 ## Blend together
 
@@ -49,7 +49,7 @@ Have a look on Logback's document:
 
 > This conversion word can also use evaluators to test logging events against a given criterion before creating the output. For example, using **%ex{full, EX_DISPLAY_EVAL}** will display the full stack trace of the exception only if the evaluator called *EX_DISPLAY_EVAL* returns a **negative** answer. Evaluators are described further down in this document.
 
-The syntax `-%wEx{full, PACKAGE_NAME...}` should exclude all frames matching to packages listed in PACKAGE_NAME.
+The syntax `%wEx{full, PACKAGE_NAME...}` should exclude all frames matching to packages listed in PACKAGE_NAME.
 
 In most case, those frames we don't want are:
 
@@ -71,7 +71,7 @@ io.undertow
 org.apache.catalina
 ```
 
-Once we put them together, the full conversion word will be looks like `%wEx{full,java.lang.reflect.Method,io.undertow,org.apache.catalina,org.springframework.aop,org.springframework.security,org.springframework.transaction,org.springframework.web,sun.reflect,net.sf.cglib,ByCGLIB}`.
+Once we put them together, the conversion word will be looks like `%wEx{full,java.lang.reflect.Method,...}`.
 
 ## Put the battery in
 
